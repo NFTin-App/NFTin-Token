@@ -3,11 +3,10 @@
 // 10 токенов за заполнение первой коллекции из 6 НФТ
 // 5 токенов за приведенного друга (обоим), учитывать в ограничении 100 дневных
 // 1 токен в подарок, если прошел всю обучалку
-// Сразу прописать, что можно собирать определенные НФТ в коллекцию и получать за это доп. токены
 
 pragma solidity ^0.8.0;
 
-contract ActivityRewards {
+contract CallRewards {
     uint256 public firstCollectionBonus = 10 ether;
     uint256 public invitedFriendBonus = 5 ether;
     uint256 public completedStudyBonus = 1 ether;
