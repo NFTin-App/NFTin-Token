@@ -137,11 +137,11 @@
 	},
 	"sources": {
 		"contracts/CallRewards.sol": {
-			"keccak256": "0xd2a3e894132413483619c618081e3b46fb58801d9f9e897b42ca2acb8c9cd811",
+			"keccak256": "0xcf4ba0ab11921c9d0d89844f31f4cb664e97c4eb07f0bcb536b0c9fd8d229b52",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://51703e381873340db72a18df3e944fadb652fffaa5c7ccfd892730c74a49fb1e",
-				"dweb:/ipfs/QmSCqtTtg3yvcxfUugP9mrSZZaCzrAXrTQaUsyESRzQ1ST"
+				"bzz-raw://1d4b047cd6b831e63cf26c09d30f17b81564d14d523992e3f251c40949156121",
+				"dweb:/ipfs/QmU5a6U2bCy4iswKK46j4H5NZxaX9uXh1kzVU7XUUUWbVZ"
 			]
 		}
 	},

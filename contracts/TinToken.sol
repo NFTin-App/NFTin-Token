@@ -15,7 +15,7 @@ contract TinToken is IERC20 {
 
     constructor() {
         thisOwner = msg.sender;
-        mint(startSupply);
+        mint(startSupply * 10 ** decimals());
     }
 
     modifier enoughTokens(address _from, uint _amount) {
@@ -29,7 +29,7 @@ contract TinToken is IERC20 {
     }
 
     function decimals() public override pure returns(uint) {
-        return 3;
+        return 18;
     }
 
     function totalSupply() public override view returns(uint) {
