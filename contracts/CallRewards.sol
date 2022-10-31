@@ -7,11 +7,16 @@
 pragma solidity ^0.8.0;
 
 contract CallRewards {
+    address thisOwner;
     uint256 public firstCollectionBonus = 10 ether;
     uint256 public invitedFriendBonus = 5 ether;
     uint256 public completedStudyBonus = 1 ether;
 
-    function firstCollectionReward(address TinToken, address _user) external {
+    constructor() {
+        thisOwner = msg.sender;
+    }
+
+    function firstCollectionReward(address TinToken, address _user) public {
         (bool success, ) = TinToken.call(
             abi.encodeWithSignature(
                 "transferFrom(address,address,uint256)",
@@ -35,9 +40,9 @@ contract CallRewards {
         require(success, "Transaction failed");
     }
 
-    function invitedFriendReward(address _user, address _newUser) public {
-        invitedFriendUser(_user);
-        invitedFriendNewUser(_newUser);
+    function invitedFriendReward(address TinToken, address _user, address _newUser) public {
+        invitedFriendUser(TinToken, _user);
+        invitedFriendNewUser(TinToken, _newUser);
     }
 
     function invitedFriendUser(address TinToken, address _user) internal {
