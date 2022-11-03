@@ -2,7 +2,25 @@
 
 pragma solidity ^0.8.0;
 
-import "./ERC20.sol";
+interface IERC20 {
+    function decimals() external pure returns(uint); 
+
+    function totalSupply() external view returns(uint);
+
+    function balanceOf(address account) external view returns(uint);
+
+    function transfer(address to, uint amount) external;
+
+    function allowance(address owner, address spender) external view returns(uint);
+
+    function approve(address spender, uint amount) external;
+
+    function transferFrom(address sender, address recipient, uint amount) external;
+
+    event Transfer(address indexed from, address indexed to, uint amount);
+
+    event Approval(address indexed owner, address indexed to, uint amount);
+}
 
 contract TinToken is IERC20 {
     address public thisOwner;
@@ -56,7 +74,7 @@ contract TinToken is IERC20 {
     }
 
     function transferFrom(address sender, address recipient, uint amount) public override enoughTokens(sender, amount) {
-        allowances[sender][recipient] -= amount;
+        allowances[sender][msg.sender] -= amount;
         balances[sender] -= amount;
         balances[recipient] += amount;
         emit Transfer(sender, recipient, amount);
