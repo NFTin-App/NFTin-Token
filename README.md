@@ -1,4 +1,4 @@
-in-App tokenomic
+# in-App tokenomic
 Our app is built around earning a user rating. Each comment or like received by a user turns into 1 rating point, and the rating * 0.0001 equals the user coefficient, which is used to calculate the tokens received and spent. The higher the user's rating and NFT, the more tokens he can receive.
 When you register you will receive 10 tokens, which you can spend on:
 Post new NFTs (1 token * per your coefficient)
